@@ -1,5 +1,7 @@
 const net = require("net");
 const readline = require('readline');
+const {PORT, IP} = require('./constants');
+
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
@@ -7,8 +9,8 @@ const rl = readline.createInterface({
 
 const connect = function () {
   const conn = net.createConnection({
-    host: `localhost`,
-    port: 50541,
+    host: IP,
+    port: PORT,
   });
   conn.setEncoding("utf8");
   console.log("Connected to the game succesfully!");
