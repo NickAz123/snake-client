@@ -16,12 +16,12 @@ const connect = function () {
   conn.on('connect', () => {
     rl.question("Enter a 3 letter initial: ", (initials) => {
       conn.write(`Name: ${initials}`);
-      movements();
+      // movements();
     } )
   })
 
   const movements = () => {
- 
+    
   }
 
   conn.on("data", (data) => {
